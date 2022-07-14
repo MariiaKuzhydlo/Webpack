@@ -1,41 +1,60 @@
-const path = require('path')
-const htmlWebpackPlagin = require('html-webpack-plugin')
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 
 module.exports = {
-	mode: 'development',
-	entry: {
-		filename: path.resolve(__dirname, 'src/index.js')
-	},
+	mode: "development",
+	entry: "./src/index.js",
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: '[name][contenthash].js',
-		clean: true
+		path: path.resolve(__dirname, "dist"),
+		filename: "index.js",
+		assetModuleFilename: "[name][ext]"
 	},
 	devServer: {
-		port: 9000,
-		compress: true,
-		hot: true,
-		static: {
-			directory: path.join(__dirname, 'dist')
-		}
+		port: 8080
 	},
+	plugins: [
+		new HTMLWebpackPlugin({
+			template: "./src/index.html"
+		}),
+		new MiniCssExtractPlugin({
+			filename: "style.css"
+		})
+
+	],
 	module: {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader']
+				use: [MiniCssExtractPlugin.loader, "css-loader"]
 			},
 			{
-				test: /\.(png|svg|jpg|jpeg|gif)s$/i,
-				type: 'asset/resourse'
+				test: /\.scss$/,
+				use: [MiniCssExtractPlugin.loader,
+					"css-loader",
+					"sass-loader"]
+			},
+			{
+				test: /\.(png|jpe?g|svg|gif)$/i,
+				type: "asset/resource",
+
+			},
+			{
+				test: /\.mp3$/,
+				type: "asset/resource",
+			},
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
 			}
 		]
-	},
-	plugins: [
-		new htmlWebpackPlagin({
-			title: 'WebpackHW_MariiaKuzhydlo',
-			filenema: 'index.html',
-			template: 'src/index.html'
-		})
-	]
+	}
 }

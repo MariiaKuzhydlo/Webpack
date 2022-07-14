@@ -29,6 +29,62 @@
 		</div>
 	</header>
 	<h1>Open console</h1>
+
+	<section class="eventsHw">
+		<div class="containerEvnt">
+			<div id='KeyA' class='key'>A</div>
+			<div id='KeyS' class='key'>S</div>
+			<div id='KeyD' class='key'>D</div>
+			<div id='KeyF' class='key'>F</div>
+			<div id='KeyG' class='key'>G</div>
+			<div id='KeyH' class='key'>H</div>
+			<div id='KeyJ' class='key'>J</div>
+			<div id='KeyK' class='key'>K</div>
+			<div id='KeyL' class='key'>L</div>
+		</div>
+
+		<audio src="BellTubular1005_31_4.mp3" id="AudioA"></audio>
+		<audio src="Castanets1021_31_2.mp3" id="AudioS"></audio>
+		<audio src="Chimes1020_37_4.mp3" id="AudioD"></audio>
+		<audio src="Chimes1020_37_5.mp3" id="AudioF"></audio>
+		<audio src="Cymbal1020_13_5.mp3" id="AudioG"></audio>
+		<audio src="Cymbal1020_17_3.mp3" id="AudioH"></audio>
+		<audio src="DrumsBongos1020_18_1.mp3" id="AudioJ"></audio>
+		<audio src="ScrapesPercussion1020_49_7.mp3" id="AudioK"></audio>
+		<audio src="SnareDrum1020_09_4.mp3" id="AudioL"></audio>
+	</section>
+
+	<div class="containerSW">
+		<section class="films">
+			<select name="sw-films" id="filmsGetInfo">
+				<option value="1">A New Hope</option>
+				<option value="2">The Empire Strikes Back</option>
+				<option value="3">Return of the Jedi </option>
+				<option value="4">The Phantom Menace</option>
+				<option value="5" selected>Attack of the Clones</option>
+				<option value="6">Revenge of the Sith</option>
+			</select>
+			<button class="sw-button" id="filmsGetInfoBtn">Get Info</button>
+			<div id="infoAboutFilms"></div>
+		</section>
+
+		<section class="planets">
+			<h1>Planets</h1>
+			<div class="planetsBtn">
+				<button class="getPlanets"> First page </button>
+				<button class="getNext"> Next page</button>
+				<button class="getPrevious"> Previous page</button>
+			</div>
+			<div class="plannetsBlock"></div>
+		</section>
+	</div>
+
+	<section class="domHW">
+		<div class="mainContainer">
+			<button id="domBnt">GenerateBlocksInterval()</button>
+			<div class="domContainer"></div>
+		</div>
+	</section>
 </body>
 
 </html>

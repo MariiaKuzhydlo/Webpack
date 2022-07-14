@@ -92,4 +92,129 @@ h1{
 	align-items: center;
 	text-align: center;
    font-size: 25px;
+	margin: 0px 0px 40px 0px;
+}
+.domContainer{
+	display: grid;
+	grid-template-columns: repeat(5,50px);
+	grid-template-rows: repeat(5,50px);
+	border-radius: 20px;
+	margin:40px;
+}
+.mainContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#domBnt{
+	padding: 15px;
+	text-transform: capitalize;
+	font-family: monospace;
+	background-color:rgb(255, 128, 0);
+	font-weight: 600;
+   cursor: pointer;
+	max-width: 300px;
+}
+.containerEvnt > div {
+	background: #e0f7fa73;
+	border: rgba(70, 131, 180, 0.548) 2px solid;
+	font-size:xx-large;
+	text-align: center;
+	color: rgb(62 78 93);
+	border-radius: 15px;
+	margin: 10px;
+	padding: 10px;
+	cursor: pointer;
+	width: 100px;
+	transition: all 0.1s linear;
+}
+.containerEvnt{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 70px auto;
+	border-bottom: 4px solid orange;
+   
+}
+
+.containerEvnt > div.active{
+	transform: scale(1.1);
+	border-color: #00d9ff;
+	box-shadow: 0 0 1rem #002fff;
+}
+.containerSW{
+	margin: 40px auto;
+	border-bottom: 4px solid orange;
+
+
+}
+.films{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px 0px 40px 0px;
+}
+
+#filmsGetInfo{
+	margin: 0px 0px 20px 0px;
+	text-align: center;
+	height: 40px;
+	border: 1px solid blue;
+	border-radius: 20px;
+	font-size: 18px;
+	font-family: 'Titan One', cursive;
+}
+.sw-button,
+.getPlanets,
+.getNext,
+.getPrevious{
+	margin: 0px 0px 30px 0px;
+	font-size: 16px;
+	background-color: rgb(161, 209, 252);
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+.gender > img {
+	width: 20px;
+	height: 20px;
+
+}
+#infoAboutFilms{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	justify-content: space-between;
+	text-align: center;
+	
+}
+.characterCard{
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 30px 0px;
+   font-size: 20px;
+}
+.name,
+.birth{
+	margin: 0px 20px 0px 0px;
+}
+
+.planets{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0px 0px 20px 0px ;
+}
+
+.planetName{
+	margin: 0px 0px 20px 0px;
+	text-align: center;
+}
+.planetsBtn{
+	display: flex;
+	margin: 0px 0px 20px 0px;
+	justify-content: space-around;
+}
+.planetsBtn > button{
+	margin: 0px 10px 0px 0px;
+	width: 165px;
 }
